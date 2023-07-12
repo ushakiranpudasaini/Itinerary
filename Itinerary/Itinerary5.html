@@ -1,0 +1,406 @@
+<html class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif'],
+                    Montserrat: ['Montserrat', 'sans-serif']
+                },
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet">
+    <title>
+        Document
+    </title>
+</head>
+
+<body class="dark:bg-gray-600 ">
+    <section class="py-16 bg-gray-100  flex items-center lg:h-screen lg:py-20   dark:bg-gray-800 font-poppins">
+        <div class="p-4 mx-auto max-w-6xl">
+            <h2
+                class="pb-2 text-xl font-bold text-center uppercase tracking-wider text-gray-800 md:text-3xl dark:text-gray-300">
+                Itinerary
+            </h2>
+            <div class="w-24 mx-auto border-b-4 rounded-full border-blue-500 mb-10 lg:mb-16 dark:border-gray-400"></div>
+            <div x-data="{ openTab: 1 } " class="p-6 block md:flex items-center bg-gray-50 shadow">
+                <ul class="block md:mb-0 mb-6 w-full md:w-[7rem]">
+                    <li @click="openTab = 1" class="  mb-4 bg-blue-50  shadow py-2 px-2"
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '1'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-airplane" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 1
+                            </span>
+                        </a>
+                    </li>
+                    <li @click="openTab = 2" class=" mb-4  shadow bg-blue-50 py-2 px-2"
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '2'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-camera" viewBox="0 0 16 16">
+                                <path
+                                    d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" />
+                                <path
+                                    d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 2
+                            </span>
+                        </a>
+                    </li>
+                    <li @click="openTab = 3" class=" shadow mb-4 bg-blue-50 py-2 px-2 "
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '3'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-bus-front-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1v2ZM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4Zm-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1Z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 3
+                            </span>
+                        </a>
+                    </li>
+                    <li @click="openTab = 4" class=" mb-4 shadow bg-blue-50 py-2 px-2 "
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '4'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-fire" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 4
+                            </span>
+                        </a>
+                    </li>
+                    <li @click="openTab = 5" class=" mb-4 shadow bg-blue-50 py-2 px-2 "
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '5'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-signpost-2-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.293.707A1 1 0 0 0 7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586A1 1 0 0 0 7.293.707z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 5
+                            </span>
+                        </a>
+                    </li>
+                    <li @click="openTab = 6" class=" shadow bg-blue-50 py-2 px-2 "
+                        :class="{'text-blue-500 border-b border-blue-500': openTab == '6'}">
+                        <a class=" inline-block flex items-center hover:text-blue-600 flex-wrap text-base rounded-t  text-blue-500 font-semibold "
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="w-5 h-5 bi bi-flag" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z" />
+                            </svg>
+                            <span class="  ml-2 text-blue-500 hover:text-blue-600 font-medium ">
+                                DAY 6
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex-1 md:pl-6 ">
+                    <div x-show="openTab === 1">
+                        <div class="flex   flex-wrap">
+                            <div class="w-full lg:w-2/5 px-4">
+                                <img class="object-cover w-full h-64 mr-4 rounded" alt="image"
+                                    src="https://i.postimg.cc/fRf8GK5z/dal-lake-kashmir-india.jpg">
+                            </div>
+                            <div class="px-4  w-full lg:w-3/5 ">
+                                <h2 class="mb-4 text-xl font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                                    Kathmandu to Pokhara by Tourist Coach
+                                </h2>
+                                <ul class=" list-outside list-disc">
+                                    <li class="text-gray-500 mb-2 dark:text-gray-400 text-base">
+                                        Upon your arrival in Pokhara, get transferred to the hotel and check-in.
+                                    </li>
+                                    <li class="text-gray-500 mb-2 dark:text-gray-400 text-base">
+                                        Spend the whole day at your leisure. Stroll through the friendly beaches or
+                                        shop
+                                        in local markets.
+                                    </li>
+                                    <li class="text-gray-500 mb-2 dark:text-gray-400 text-base">
+                                        Stay overnight at the resort
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 2">
+                        <div class="flex   flex-wrap">
+                            <div class="px-4  flex-1 ">
+                                <h2 class="mb-4 text-xl font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                                    Sightseeing city, local guided tour
+                                </h2>
+                                <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                    Early morning sunrise trip to Sarangkot, then back to hotel for breakfast then visit
+                                    Tal
+                                    Barahi Temple (Fewa Lake),Gupteshowar Cave,Devis fall,Bindabashini Temple, Bat Cave
+                                    &
+                                    Mahendra Cave,back to hotel for Lunch, free time at evening to visit around the
+                                    Lakeside
+                                    Market,dinner will be at hotel.
+                                </p>
+                                <div class="flex flex-wrap mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  ">
+                                            Foods: <span class=" ml-1 font-semibold">
+                                                Breakfast</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  ">
+                                            Altitude: <span class=" ml-1 font-semibold">
+                                                1400m
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  ">
+                                            Accomodation: <span class=" ml-1 font-semibold">
+                                                Included
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/4 px-4">
+                                <img class="object-cover w-full h-52 mr-4 rounded" alt="image"
+                                    src="https://i.postimg.cc/vB5Nqs1B/pexels-zenith-photographics-14989389.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 3">
+                        <h2 class="mb-4 text-lg font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                            Trek through arid landscapes and remote settlements
+                        </h2>
+                        <div class="flex  mb-4 flex-wrap">
+                            <img class="object-cover w-20 h-20 mr-4 rounded" alt="image"
+                                src="https://i.postimg.cc/dQyHwd9y/pexels-pritush-munankarmi-4411191.jpg">
+                            <div class="  flex-1 ">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit. Delectus
+                                    magni Lorem ipsum, dolor sit amet magni
+                                    eius eaque
+                                    Pariatur
+                                    eius eaque
+                                    Pariatur
+                                    numquam, odio quod nobis ipsum ex cupiditate.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex  mb-4 flex-wrap">
+                            <img class="object-cover w-20 h-20 mr-4 rounded" alt="image"
+                                src="https://i.postimg.cc/fRf8GK5z/dal-lake-kashmir-india.jpg">
+                            <div class="  flex-1 ">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit. Delectus
+                                    Lorem ipsum, dolor sit amet magni
+                                    eius eaque
+                                    Pariatur magni
+                                    eius eaque
+                                    Pariatur
+                                    numquam, odio quod nobis ipsum ex cupiditate.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex  flex-wrap">
+                            <img class="object-cover w-20 h-20 mr-4 rounded" alt="image"
+                                src="https://i.postimg.cc/vB5Nqs1B/pexels-zenith-photographics-14989389.jpg">
+                            <div class="  flex-1 ">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    Lorem ipsum, dolor sit amet magni
+                                    eius eaque
+                                    Pariatur
+                                    consectetur adipisicing elit. Delectus
+                                    magni
+                                    eius eaque
+                                    Pariatur
+                                    numquam, odio quod nobis ipsum ex cupiditate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 4">
+                        <div class="flex items-center flex-wrap">
+                            <div class="px-4  md:w-1/3 w-full ">
+                                <h2 class="mb-4 text-xl font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                                    Set up camp, prepare
+                                </h2>
+                                <p class="text-gray-500 text-sm mt-4 dark:text-gray-500">
+                                    Early morning sunrise trip to Sarangkot, then back to hotel for breakfast then visit
+                                    Tal
+                                    Barahi Temple (Fewa Lake),Gupteshowar Cave,Devis fall,Bindabashini Temple, Bat Cave
+                                    &
+                                    Mahendra Cave,back to hotel for Lunch, free time at evening to visit around the
+                                    Lakeside
+                                    Market,dinner will be at hotel.
+                                </p>
+                            </div>
+                            <div class="md:w-1/3 w-full flex px-4 lg:w-1/3">
+                                <img class="object-cover w-full h-52 mr-4 rounded-md" alt="image"
+                                    src="https://i.postimg.cc/Vkz2s8mM/pexels-oleksandr-pidvalnyi-344102.jpg">
+                                <img class="object-cover w-full h-52 mr-4 rounded-md " alt="image"
+                                    src="https://i.postimg.cc/rsCtqWNS/pexels-vlad-bagacian-1061640.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 5">
+                        <h2 class="mb-4 text-xl font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                            Full Day Jungle Safari
+                        </h2>
+                        <div class=" gap-4  items-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  ">
+                            <img class="object-cover w-full h-52 mr-2 rounded-md" alt="image"
+                                src="https://i.postimg.cc/CxVPjvsw/pexels-venkat-ragavan-982021.jpg">
+                            <img class="object-cover w-full h-52 mr-2 rounded-md " alt="image"
+                                src="https://i.postimg.cc/44DBg8Mp/pexels-yao-kailun-226163.jpg">
+                            <img class="object-cover w-full h-52 mr-2 rounded-md" alt="image"
+                                src="https://i.postimg.cc/bYt93xJr/pexels-david-ria-o-cort-s-975771.jpg">
+                            <img class="object-cover w-full h-52 mr-2 rounded-md " alt="image"
+                                src="https://i.postimg.cc/rsCtqWNS/pexels-vlad-bagacian-1061640.jpg">
+                        </div>
+                    </div>
+                    <div x-show="openTab === 6">
+                        <h2 class="mb-4 text-xl font-semibold tracking-wider text-gray-700 dark:text-gray-400">
+                            Bird watching Tour and Return Kathmandu
+                        </h2>
+                        <p class="text-gray-500 mb-4 dark:text-gray-500">
+                            After breakfast, you will be transferred to the bus station. Then, catch a bus to Kathmandu.
+                        </p>
+                        <p class="text-gray-500 mb-4 dark:text-gray-500">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </p>
+                        <div class=" gap-4  items-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  ">
+                            <img class="object-cover w-full h-32 mr-2 rounded-md" alt="image"
+                                src="https://i.postimg.cc/Hkqp41PV/pexels-pixabay-55832.jpg">
+                            <img class="object-cover w-full h-32 mr-2 rounded-md " alt="image"
+                                src="https://i.postimg.cc/44DBg8Mp/pexels-yao-kailun-226163.jpg">
+                            <img class="object-cover w-full h-32 mr-2 rounded-md" alt="image"
+                                src="https://i.postimg.cc/bYt93xJr/pexels-david-ria-o-cort-s-975771.jpg">
+                            <img class="object-cover w-full h-32 mr-2 rounded-md " alt="image"
+                                src="https://i.postimg.cc/vB5Nqs1B/pexels-zenith-photographics-14989389.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div x-data="{ tab: 'profile'}">
+            <div class="flex mx-2 mb-4 space-x-4 text-xl border-b border-gray-300">
+                <div class="hover:text-indigo-600 py-2"
+                    :class="{'text-indigo-600 border-b border-indigo-600': tab == 'profile'}" @click="tab = 'profile'">
+                    Profile
+                </div>
+
+                <div class="hover:text-indigo-600 py-2 pl-2"
+                    :class="{'text-indigo-600 border-b border-indigo-600': tab == 'account'}" @click="tab = 'account'">
+                    Account</div>
+
+                <div class="hover:text-indigo-600 py-2 pl-2"
+                    :class="{'text-indigo-600 border-b border-indigo-600': tab == 'settings'}"
+                    @click="tab = 'settings'">Settings</div>
+            </div>
+        </div> -->
+        <!-- <div class="flex flex-col justify-center ">
+            <div class="w-full mx-auto lg:max-w-4xl">
+                <div class="relative">
+                    <div
+                        class="absolute hidden w-px h-full transform -translate-x-1/2 bg-blue-300 dark:bg-gray-600 lg:block left-1/2">
+                    </div>
+                    <div class="space-y-2 lg:space-y-4">
+                        <div>
+                            <div class="flex flex-col items-center">
+                                <div class="flex items-center justify-start w-full mx-auto">
+                                    <div class="w-full lg:w-1/2 lg:pr-8">
+                                        <div class="relative flex-1 mb-16  lg:mb-8 ">
+                                            <img class="object-cover w-full h-64 mr-4 rounded" alt="image"
+                                                src="https://i.postimg.cc/RZZgzbZp/annapurna.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="w-full lg:w-1/2 lg:pl-8">
+                                        <div class="relative flex-1 mb-16  lg:mb-8 ">
+                                            s
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 -translate-y-4 bg-blue-100 border border-blue-600 rounded-full dark:border-gray-700 dark:bg-gray-700 left-1/2 sm:translate-y-0">
+                                    <span class="text-blue-600 dark:text-gray-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
+                                            <path
+                                                d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+
+</html>

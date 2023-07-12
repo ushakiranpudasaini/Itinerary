@@ -1,0 +1,569 @@
+<html class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif'],
+                    Montserrat: ['Montserrat', 'sans-serif']
+                },
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>
+        Document
+    </title>
+
+<body class="dark:bg-gray-800 font-poppins">
+    <section class="flex items-center bg-gray-100 xl:h-screen dark:bg-gray-800">
+        <div class="p-4 mx-auto max-w-6xl">
+            <h2
+                class="pb-2 text-xl font-bold text-center uppercase tracking-wider text-gray-800 md:text-3xl dark:text-gray-300">
+                Itinerary
+            </h2>
+            <div class="w-24 mx-auto border-b-4 rounded-full border-blue-500 mb-10 lg:mb-16 dark:border-gray-400"></div>
+            <div class="  " x-data="{selected:1}">
+                <ul class="flex flex-col ">
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            01
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Tengboche- Dingboche (alt. 4410m) </h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container1"
+                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    After breakfast at lodge, you'll descend
+                                    down from Tengboche, winding through the
+                                    rhododendron forest to Deboche and crossing a bridge over the raging Imja Khol
+                                    River. Hug the valley wall, and then traverse the plains to Dingboche, the start of
+                                    the Imja Tse Valley.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            02
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Kathmandu (1310m) - Phakding (alt. 2640m)</h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container2"
+                            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    Early morning you’ll transfer to airport and you’ll make an early start to take a
+                                    spectacular, short mountain flight to Lukla, the start point for our trek. During
+                                    the flight you’ll see scenic views of Langtang, Jugal ranges, Rolwaling Himal,
+                                    Gaurisankar and Menlumtse before getting your first glimpse of Everest.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 3 ? selected = 3 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            03
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Namche (alt. 3440m)</h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container3"
+                            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    As always after breakfast at the lodge, you’ll have a gentle walk through the forest
+                                    with magnificent view of mountains. The great view of the mighty peaks of Everest,
+                                    Nuptse, Lhotse, Ama Dablam, Thamserku.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 4 ? selected = 4 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            04
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Tengboche- Dingboche (alt. 4410m) </h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container4"
+                            x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    As always after breakfast at the lodge, you’ll have a gentle walk through the forest
+                                    with magnificent view of mountains. The great view of the mighty peaks of Everest,
+                                    Nuptse, Lhotse, Ama Dablam, Thamserku.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 5 ? selected = 5 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            05
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Gorakshep- Everest BC (alt. 5663m) –Lobuche (alt. 4910m) </h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container5"
+                            x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    As always after breakfast at the lodge, you’ll have a gentle walk through the forest
+                                    with magnificent view of mountains. The great view of the mighty peaks of Everest,
+                                    Nuptse, Lhotse, Ama Dablam, Thamserku.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bg-white rounded-md my-2 shadow-lg">
+                        <button type="button" class="w-full p-2 text-left  "
+                            @click="selected !== 6 ? selected = 6 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap items-center">
+                                    <div
+                                        class="bg-gray-100 shadow-md p-2 items-center flex  rounded-md mr-4 dark:bg-gray-700">
+                                        <span class="text-base mr-2 text-gray-600 dark:text-gray-400">Day :</span>
+                                        <p class="mt-1  text-blue-500 dark:text-blue-400 font-semibold text-base">
+                                            06
+                                        </p>
+                                    </div>
+                                    <h2 class="text-gray-900 dark:text-gray-300 text-lg font-semibold">
+                                        Fly back to Kathmandu</h2>
+                                </div>
+                                <span class="text-blue-700 dark:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" style=""
+                            x-ref="container6"
+                            x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
+                            <div class="px-4 pb-4">
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    30-minutes amazing scenic fly back to Kathmandu. Overnight at
+                                    hotel, breakfast included.
+                                </p>
+                                <div class="flex flex-wrap  mt-4">
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
+                                                </path>
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Duration: <span class=" ml-1">16
+                                                days</span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap mr-6 ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-map" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600  dark:text-gray-400">
+                                            Destination: <span class=" ml-1">
+                                                Nepal
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center flex-wrap ">
+                                        <span class="mr-2 text-blue-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="w-4 h-4 bi bi-people-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400 ">
+                                            Group Size: <span class=" ml-1">
+                                                Min pax 2
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script defer src=" https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js">
+    </script>
+</body>
+
+</html>

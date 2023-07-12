@@ -1,0 +1,388 @@
+<html class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif'],
+                    Montserrat: ['Montserrat', 'sans-serif']
+                },
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>
+        Document
+    </title>
+
+<body class="dark:bg-gray-800 font-poppins">
+    <section class="items-center py-16 bg-white lg:h-screen font-poppins dark:bg-gray-800">
+        <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+            <div class="max-w-xl mx-auto">
+                <div class="text-center ">
+                    <div class="relative flex flex-col items-center">
+                        <div
+                            class="absolute hidden uppercase md:block -top-14 left-0 text-[120px] text-gray-400 font-bold opacity-10">
+                            Itinerary
+                        </div>
+                        <h1 class="text-5xl font-bold leading-tight uppercase dark:text-white"> Travel <span
+                                class="text-blue-500"> Plan
+                            </span> </h1>
+                        <div class="flex w-24 mt-1 mb-10 overflow-hidden rounded">
+                            <div class="flex-1 h-2 bg-blue-200">
+                            </div>
+                            <div class="flex-1 h-2 bg-blue-400">
+                            </div>
+                            <div class="flex-1 h-2 bg-blue-600">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-16 text-base text-center text-gray-500">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus magni eius eaque?
+                        Pariatur
+                        numquam, odio quod nobis ipsum ex cupiditate?
+                    </p>
+                </div>
+            </div>
+            <div class="w-full mx-auto lg:max-w-3xl">
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-10 mr-4 md:w-24">
+                        <div>
+                            <div
+                                class="flex items-center tracking-wider text-lg font-semibold justify-center w-10 h-10 border border-blue-500 rounded-full bg-blue-100 text-blue-700 dark:border-blue-400">
+                                01
+                            </div>
+                        </div>
+                        <div class="w-px h-full border border-dashed border-blue-300"></div>
+                    </div>
+                    <div class="relative flex-1 mb-16 md:mb-8 dark:bg-gray-900">
+                        <div class="relative z-20 ">
+                            <h2 class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
+                                <span class="mr-2">DAY 1 :</span>
+                                Arrived Kathmandu
+                                (Altitude:
+                                1350/4428 ft. Meal:
+                                Dinner)
+                            </h2>
+                            <strong class="text-blue-500  tracking-wider">10:00 AM to 10:00 PM</strong>
+                            <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                Arrive in Kathmandu at any time. Our airport
+                                representative
+                                will welcome you and explain the program further.
+                            </p>
+                            <ul class="mt-4 list-inside">
+                                <li class="flex items-center mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Private transport
+                                </li>
+                                <li class="flex mb-2 items-center text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Entrance fees
+                                </li>
+                                <li class="flex items-center  text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Lunch box, water and fees
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-10 mr-4 md:w-24">
+                        <div>
+                            <div
+                                class="flex items-center tracking-wider text-lg font-semibold justify-center w-10 h-10 border border-blue-500 rounded-full bg-blue-100 text-blue-700 dark:border-blue-400">
+                                02
+                            </div>
+                        </div>
+                        <div class="w-px h-full border border-dashed border-blue-300"></div>
+                    </div>
+                    <div class="relative flex-1 mb-16 md:mb-8 dark:bg-gray-900">
+                        <div class="relative z-20 ">
+                            <h2 class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
+                                <span class="mr-2">DAY 2 :</span>
+                                Kathmandu (1310m) - Phakding (alt. 2640m)
+                            </h2>
+                            <strong class="text-blue-500  tracking-wider">10:00 AM to 10:00 PM</strong>
+                            <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                Early morning you’ll transfer to airport and you’ll make an early start to take a
+                                spectacular, short mountain flight to Lukla, the start point for our trek.
+
+                            </p>
+                            <ul class="mt-4 list-inside">
+                                <li class="flex items-center mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Private transport
+                                </li>
+                                <li class="flex mb-2 items-center text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Entrance fees
+                                </li>
+                                <li class="flex items-center  text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Lunch box, water and fees
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-10 mr-4 md:w-24">
+                        <div>
+                            <div
+                                class="flex items-center tracking-wider text-lg font-semibold justify-center w-10 h-10 border border-blue-500 rounded-full bg-blue-100 text-blue-700 dark:border-blue-400">
+                                03
+                            </div>
+                        </div>
+                        <div class="w-px h-full border border-dashed border-blue-300"></div>
+                    </div>
+                    <div class="relative flex-1 mb-16 md:mb-8 dark:bg-gray-900">
+                        <div class="relative z-20 ">
+                            <h2 class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
+                                <span class="mr-2">DAY 3 :</span>
+                                Arrived Kathmandu
+                                (Altitude:
+                                1350/4428 ft. Meal:
+                                Dinner)
+                            </h2>
+                            <strong class="text-blue-500  tracking-wider">10:00 AM to 10:00 PM</strong>
+                            <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                Arrive in Kathmandu at any time. Our airport
+                                representative
+                                will welcome you and explain the program further.
+                            </p>
+                            <ul class="mt-4 list-inside">
+                                <li class="flex items-center mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Private transport
+                                </li>
+                                <li class="flex mb-2 items-center text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Entrance fees
+                                </li>
+                                <li class="flex items-center  text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Lunch box, water and fees
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-10 mr-4 md:w-24">
+                        <div>
+                            <div
+                                class="flex items-center tracking-wider text-lg font-semibold justify-center w-10 h-10 border border-blue-500 rounded-full bg-blue-100 text-blue-700 dark:border-blue-400">
+                                04
+                            </div>
+                        </div>
+                        <div class="w-px h-full border border-dashed border-blue-300"></div>
+                    </div>
+                    <div class="relative flex-1 mb-16 md:mb-8 dark:bg-gray-900">
+                        <div class="relative z-20 ">
+                            <h2 class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
+                                <span class="mr-2">DAY 4 :</span>
+                                Kathmandu (1310m) - Phakding (alt. 2640m)
+                            </h2>
+                            <strong class="text-blue-500  tracking-wider">10:00 AM to 10:00 PM</strong>
+                            <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                Early morning you’ll transfer to airport and you’ll make an early start to take a
+                                spectacular, short mountain flight to Lukla, the start point for our trek.
+
+                            </p>
+                            <ul class="mt-4 list-inside">
+                                <li class="flex items-center mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Private transport
+                                </li>
+                                <li class="flex mb-2 items-center text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Entrance fees
+                                </li>
+                                <li class="flex items-center  text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Lunch box, water and fees
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-10 mr-4 md:w-24">
+                        <div>
+                            <div
+                                class="flex items-center tracking-wider text-lg font-semibold justify-center w-10 h-10 border border-blue-500 rounded-full bg-blue-100 text-blue-700 dark:border-blue-400">
+                                05
+                            </div>
+                        </div>
+                        <div class="w-px h-full border border-dashed border-blue-300"></div>
+                    </div>
+                    <div class="relative flex-1 mb-16 md:mb-8 dark:bg-gray-900">
+                        <div class="relative z-20 ">
+                            <h2 class="mb-2 text-xl font-bold text-gray-600 dark:text-gray-400">
+                                <span class="mr-2">DAY 5 :</span>
+                                Kathmandu (1310m) - Phakding (alt. 2640m)
+                            </h2>
+                            <strong class="text-blue-500  tracking-wider">10:00 AM to 10:00 PM</strong>
+                            <p class="text-gray-500 mt-4 dark:text-gray-500">
+                                Early morning you’ll transfer to airport and you’ll make an early start to take a
+                                spectacular, short mountain flight to Lukla, the start point for our trek.
+                            </p>
+                            <ul class="mt-4 list-inside">
+                                <li class="flex items-center mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Private transport
+                                </li>
+                                <li class="flex mb-2 items-center text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Entrance fees
+                                </li>
+                                <li class="flex items-center  text-base text-gray-500 dark:text-gray-400">
+                                    <span class="mr-2 text-blue-500 dark:text-blue-400 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="w-4 h-4 bi bi-check-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                        </svg>
+                                    </span>
+                                    Lunch box, water and fees
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
